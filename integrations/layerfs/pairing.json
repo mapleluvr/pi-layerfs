@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "status": "qualified Linux source-release pairing; binaries distributed separately",
+  "producer": {
+    "repository": "https://github.com/Ephemeral-AI-Lab/layerfs",
+    "commit": "ed9118963d5235767b53f9f7d084939ce9ee8256",
+    "sourceTreeSha256": "36828c7c64d46b1ed0d314cae013d6b5dcb459ce00161e2fe6399992be73acba",
+    "rustToolchain": "1.85.1",
+    "profile": "debug"
+  },
+  "sdk": {
+    "name": "@layerfs/node",
+    "version": "2.0.0-rc.1",
+    "apiFamilies": 10,
+    "apiCalls": 83,
+    "archive": {
+      "filename": "layerfs-node-2.0.0-rc.1.tgz",
+      "bytes": 69836817,
+      "sha256": "a9dd7caee673f12eee720cb44ef8bdc2fcbd350bbaa89cd8524e2d085d6fa569"
+    },
+    "nativeAddon": {
+      "archivePath": "package/layerfs.node",
+      "bytes": 276405376,
+      "sha256": "c42e608afbb2cf61fbbeb9b4c1f310ee4a5d9eea64cdf9cf5d31b18bde4cce30"
+    },
+    "registryArtifactQualified": false
+  },
+  "runtime": {
+    "version": "2.0.0",
+    "platform": "linux-x86_64",
+    "bundleHash": "df6a1136fb68f1ddc1e8eedf023b2c6d272ccf8182a721f984d6e873d38e46f8",
+    "bundleManifestSha256": "f1cf9eef525ddc172ca2197b0f8c7488cbc5934c14e5a1845a4be99f220939d6",
+    "protocol": 3,
+    "image": "sha256:94926f0fd968cd68ac486502185a5dd78687874a9ec7727f64fe2af696e28311",
+    "files": {
+      "layerfs": "f6d1158583f84f195a7a0239bb8b54e4eb4a19706b6166fc142ad547c6f93b60",
+      "layerfs-daemon": "2bf00723c7b290623932a593a6c82e0355b0908b50a6d88dc99be914d6307ad9",
+      "layerfs-sandbox-helper": "65c2a97cd2e3cb5aeb78cd6dd02a93d3055ac7505c06f4f537a207c999a74bce",
+      "sandbox-image.tar": "c81ef0222fd8faf0922d82d185f5e6396c4763a4344e601afdc10fcf06c5e17a"
+    }
+  },
+  "host": {
+    "pi": "1.5.2",
+    "node": ">=24"
+  },
+  "limits": [
+    "Prepared Linux control and exact mounted Workspace views required",
+    "Same-version registry SDK uses an older API surface",
+    "Independently rebuilt artifacts need their own pairing qualification",
+    "No crash or power-loss durability qualification"
+  ]
+}

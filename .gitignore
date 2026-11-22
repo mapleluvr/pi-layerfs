@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+*.tgz
+# Local experiments, delivery records, and retained evidence
+reports/
+TASK.md
+WORKER-HANDOFF.md
+npm-publish-manifest.json
+docs/.temp/
+.env
+.env.*
+!.env.example
+.ruff_cache/
+__pycache__/

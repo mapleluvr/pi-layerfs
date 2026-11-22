@@ -1,0 +1,32 @@
+{
+  "name": "pi-layerfs",
+  "version": "0.1.0",
+  "description": "LayerFS-backed file tools and a versioned execution hook for Pi",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mapleluvr/pi-layerfs.git"
+  },
+  "homepage": "https://github.com/mapleluvr/pi-layerfs#readme",
+  "bugs": { "url": "https://github.com/mapleluvr/pi-layerfs/issues" },
+  "keywords": ["pi-package", "pi-extension", "layerfs"],
+  "engines": { "node": ">=24" },
+  "files": ["index.ts", "src", "README.md", "LICENSE", "CHANGELOG.md", "docs", "integrations/layerfs/pairing.json"],
+  "pi": { "extensions": ["./index.ts"] },
+  "scripts": {
+    "test": "node --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@layerfs/node": "2.0.0-rc.1"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "1.5.2",
+    "typebox": "^1.3.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
+  }
+}
