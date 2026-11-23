@@ -23,6 +23,10 @@ The qualified SDK identifies itself as `@layerfs/node@2.0.0-rc.1`, but the same-
 
 See [verification and limitations](docs/verification/v0.1.0.md) for the exercised scope.
 
+## Set up Podman for Git projects
+
+Set up one rootful Podman container and use the same launcher for Git checkouts. It imports the committed snapshot on first use and resumes the saved Workspace and Pi session afterward. Follow the [Linux Podman setup guide](docs/podman-setup.md).
+
 ## Install in a prepared environment
 
 Clone the tagged source and install the matched SDK archive together with the package's declared dependencies. Installation scripts are disabled:
@@ -58,7 +62,7 @@ pi --no-extensions -e ./index.ts
 
 The example loads only this extension and makes no persistent Pi configuration change. Pi's ordinary session storage stays outside LayerFS checkpoints. Use `layerfs_status` to inspect the binding.
 
-A host directory change leaves the selected LayerFS Project unchanged. Project import, candidate export, Git delivery, and source-directory write-back are managed separately.
+This direct extension setup uses the Project selected by its environment variables. The [Podman launcher](docs/podman-setup.md#3-open-a-repository) handles per-checkout import and selection.
 
 ### Configuration
 
